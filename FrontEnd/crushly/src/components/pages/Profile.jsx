@@ -5,7 +5,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import ImageModal from "../ImageModel/ImageModel";
 
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://crushly-backend.onrender.com";
 
 export default function Profile() {
   const { isAuthenticated, isLoading } = useSelector((state) => state.auth);
