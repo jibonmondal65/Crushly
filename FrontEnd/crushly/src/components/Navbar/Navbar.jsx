@@ -61,7 +61,7 @@ export default function Navbar() {
                     onClick={async () => {
                       try {
                         await axios.post(
-                          "http://localhost:5000/user/logout",
+                          "https://crushly-frontend.onrender.com/user/logout",
                           {},
                           { withCredentials: true }
                         );
