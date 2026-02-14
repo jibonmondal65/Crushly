@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const cookiePaser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 const { checkForAuthenticationCookie } = require("./middlewares/authentication");
 
 const { connectMongoDB } = require("./connections");
@@ -23,7 +23,7 @@ app.use(
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookiePaser());
+app.use(cookieParser());
 
 connectMongoDB(process.env.MONGO_URI);
 
