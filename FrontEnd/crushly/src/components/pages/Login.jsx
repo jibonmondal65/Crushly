@@ -14,7 +14,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const API_BASE = "http://localhost:5000";
+  const API_BASE = "https://crushly-backend.onrender.com";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
