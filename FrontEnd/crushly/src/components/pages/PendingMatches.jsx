@@ -9,7 +9,7 @@ export default function PendingMatches() {
   const [loading, setLoading] = useState(true);
   const [preview, setPreview] = useState(null);
 
-  const API_BASE = "http://localhost:5000";
+  const API_BASE = "https://crushly-backend.onrender.com";
 
 
   const { user, isAuthenticated, isLoading } = useSelector(
