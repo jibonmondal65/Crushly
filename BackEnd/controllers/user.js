@@ -110,7 +110,7 @@ const userSignin = async (req, res) => {
       .status(200)
       .cookie("token", token, {
         httpOnly: true,
-        sameSite: "lax",
+        sameSite: "none",
         path: "/",
       })
       .json({
