@@ -12,7 +12,7 @@ export default function AddCrush() {
   const navigate = useNavigate();
   const [allowed, setAllowed] = useState(false);
 
-  const API_BASE = "http://localhost:5000";
+  const API_BASE = "https://crushly-backend.onrender.com";
 
   useEffect(() => {
     axios
