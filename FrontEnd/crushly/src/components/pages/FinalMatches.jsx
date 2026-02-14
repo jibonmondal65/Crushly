@@ -6,7 +6,7 @@ export default function FinalMatches() {
   const [matches, setMatches] = useState([]);
   const [preview, setPreview] = useState(null);
 
-  const API_BASE = "http://localhost:5000";
+  const API_BASE = "https://crushly-backend.onrender.com";
 
   useEffect(() => {
     axios
