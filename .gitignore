@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+BackEnd/node_modules/
+FrontEnd/node_modules/
+FrontEnd/crushly/node_modules/
+
+# Environment files
+.env
+BackEnd/.env
+FrontEnd/.env
+
+# Uploads
+BackEnd/uploads/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
