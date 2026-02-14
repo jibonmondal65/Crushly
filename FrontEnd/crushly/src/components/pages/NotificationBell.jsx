@@ -8,7 +8,7 @@ export default function NotificationBell() {
     const notifRef = useRef(null);
     const { isAuthenticated } = useSelector((state) => state.auth);
 
-    const API_BASE = "http://localhost:5000";
+    const API_BASE = "https://crushly-backend.onrender.com";
 
     const fetchNotifications = async () => {
         try {
