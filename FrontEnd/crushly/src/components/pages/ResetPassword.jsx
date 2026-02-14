@@ -13,7 +13,7 @@ export default function ResetPassword() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_BASE = "http://localhost:5000";
+  const API_BASE = "https://crushly-backend.onrender.com";
 
   if (!email) {
     navigate("/forgot-password");
