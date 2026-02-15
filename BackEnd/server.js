@@ -14,6 +14,8 @@ const notificationRouter = require("./routers/notification");
 
 const app = express();
 
+app.set("trust proxy", 1);
+
 app.use(
   cors({
     origin: process.env.CLIENT_URL, 
