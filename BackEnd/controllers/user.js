@@ -18,7 +18,7 @@ const userSignup = async (req, res) => {
 
     const otp = generateOTP();
 
-    await User.create({
+    const user = await User.create({
       firstName,
       lastName,
       email,
@@ -28,11 +28,16 @@ const userSignup = async (req, res) => {
       isEmailVerified: false,
     });
 
-    await sendEmail(email, otp);
+    try {
+      await sendEmail(email, otp);
+    } catch (err) {
+      console.error("Email sending failed:", err);
+    }
 
     return res.status(201).json({
       message: "OTP sent to your email",
     });
+
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: "Registration failed" });
