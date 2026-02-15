@@ -6,7 +6,7 @@ export const checkAuth = () => async (dispatch) => {
 
   try {
     const res = await axios.get(
-      "https://crushly-frontend.onrender.com/user/me",
+      "https://crushly-backend.onrender.com/user/me",
       { withCredentials: true }
     );
 
