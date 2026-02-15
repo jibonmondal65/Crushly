@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -14,10 +14,11 @@ export default function VerifyOTP() {
 
   const API_BASE = "https://crushly-backend.onrender.com";
 
-  if (!email) {
-    navigate("/register");
-    return null;
-  }
+  useEffect(() => {
+    if (!email) {
+      navigate("/register", { replace: true });
+    }
+  }, [email, navigate]);
 
   const handleVerify = async (e) => {
     e.preventDefault();
@@ -33,7 +34,7 @@ export default function VerifyOTP() {
 
       navigate("/login", {
         replace: true,
-        state: { message: "Email verified successfully " },
+        state: { message: "Email verified successfully" },
       });
     } catch (err) {
       setError(err.response?.data?.message || "Invalid OTP");
@@ -42,10 +43,11 @@ export default function VerifyOTP() {
     }
   };
 
+  if (!email) return null;
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
-
         <h2 className="text-2xl font-bold text-center text-pink-600 mb-4">
           Verify Email 📩
         </h2>
